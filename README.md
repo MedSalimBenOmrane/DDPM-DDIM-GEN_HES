@@ -47,7 +47,7 @@ Il contient :
 ````
 
 2. **Créer un environnement Python**
-
+````
    ```bash
    python3 -m venv venv
    source venv/bin/activate
