@@ -77,7 +77,7 @@ Lancez l’entraînement sur votre dataset HES avec la configuration par défaut
 python train_hes.py \
   --config configs/hes.yml \
   --batch_size 16 \
-  --epochs 1000 \
+  --epochs 100 \
   --save_dir checkpoints
 ```
 
