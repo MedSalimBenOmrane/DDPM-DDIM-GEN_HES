@@ -43,7 +43,7 @@ Il contient :
 
 1. **Cloner le dépôt**  
    ```bash
-   git clone https://github.com/votre-utilisateur/votre-repo.git
+   git clone https://github.com/MedSalimBenOmrane/DDPM-DDIM-GEN_HES
    cd votre-repo
 ````
 
@@ -63,7 +63,7 @@ Il contient :
    Le dernier modèle (`latest.pt`) est accessible ici :
 
    ```
-   https://drive.google.com/drive/u/2/folders/1_IA5Se-CPvuphC82AojaTJ3QhQz688PS
+   [https://drive.google.com/drive/u/2/folders/1_IA5Se-CPvuphC82AojaTJ3QhQz688PS](https://drive.google.com/drive/folders/1_IA5Se-CPvuphC82AojaTJ3QhQz688PS?usp=sharing)
    ```
 
    Placez ce fichier dans `checkpoints/latest.pt`.
