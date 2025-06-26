@@ -1,5 +1,5 @@
 # DDPM-DDIM-GEN_HES
-```markdown
+markdown
 # Génération d’images histopathologiques avec DDPM / DDIM
 
 ## Description
@@ -14,7 +14,7 @@ Il contient :
 
 ## Structure du projet
 
-```
+
 
 ├── checkpoints/                   # logs de training & checkpoints
 │   ├── latest.pt                 # dernier modèle entraîné (voir Drive)
