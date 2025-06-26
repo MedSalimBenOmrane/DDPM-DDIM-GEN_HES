@@ -1,0 +1,49 @@
+# configs/hes.yml
+
+data:
+  # Chemin vers le dossier contenant train/, val/, test/
+  root: "/home/salim/Desktop/PFE/implimentation/PNP_FM/dataHes"
+  image_size: 256            # vos patches sont déjà 256×256
+  random_flip: true          # augmentation horizontale
+  num_workers: 8             # à ajuster selon votre CPU
+
+model:
+  # Paramètres du U-Net "simple"
+  in_channels: 3             # images RGB
+  dim: 128                   # ch dans le code, nombre de base de filtres
+  dim_mults: [1, 1, 2, 2, 4, 4]  # profondeur croissante
+  dropout: 0.0
+  resample_with_conv: true   # up/down-sampling par conv
+  ema_rate: 0.999  
+
+diffusion:
+  # Schedule de diffusion
+  timesteps: 1000            # nombre d’étapes T
+  beta_schedule: linear      # linéaire de β₁ à β_T
+  beta_start: 0.0001
+  beta_end: 0.02
+  objective: pred_noise      # prédire le bruit (ou pred_v)
+
+optim:
+  # Optimiseur Adam pour la diffusion
+  lr: 0.00005
+  beta1: 0.9
+  eps: 0.00000001
+  grad_clip: 0.5
+
+training:
+  # Boucle d’entraînement
+  batch_size: 16
+  n_epochs: 100
+  n_iters: 151800
+  snapshot_freq: 7590       # checkpoints toutes les ~7590 iters
+  validation_freq: 7590     # (optionnel, inutilisé dans train_hes.py)
+  gradient_accumulate_every: 1      # nbr de mini-batches pour accumulation
+  checkpoint_dir: "checkpoints"     # dossier de sauvegarde des .pt et samples
+  fid_stats_dir: "fid_stats"        # où cachez les stats Inception (.npz)
+  num_fid_samples: 5000            # nb d’images réelles/fakes pour FID
+
+sampling:
+  # Pour le sampling périodique avec EMA
+  batch_size: 16
+  sampling_timesteps: 100   # si vous voulez un échantillonnage rapide

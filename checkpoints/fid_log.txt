@@ -1,0 +1,13 @@
+Epoch: 5, iter: 7590, FID: 361.9117
+Epoch: 10, iter: 15180, FID: 254.1988
+Epoch: 15, iter: 22770, FID: 186.6587
+Epoch: 20, iter: 30360, FID: 134.5430
+Epoch: 25, iter: 37950, FID: 104.6676
+Epoch: 30, iter: 45540, FID: 93.8061
+Epoch: 35, iter: 53130, FID: 85.2703
+Epoch: 40, iter: 60720, FID: 77.2996
+Epoch: 45, iter: 68310, FID: 76.5153
+Epoch: 50, iter: 75900, FID: 75.9072
+Epoch: 55, iter: 83490, FID: 76.9823
+Epoch: 60, iter: 91080, FID: 74.9891
+Epoch: 65, iter: 98670, FID: 77.8627
